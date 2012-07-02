@@ -1,0 +1,49 @@
+<p> conf=<%= conf.msisdn %> </p>
+
+<div>
+    <ul id="participants">
+    <% for (var p in conf.participants) { %>
+             <li id="<%= p %>"><%= p %> [<%= conf.participants[p].status %>] </li>
+    <% }; %>
+	</ul>
+
+	
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+
+
+<script>
+  var socket = io.connect(); // TIP: .connect with no args does auto-discovery
+  
+  socket.on("<%=conf.msisdn%>", function (data) {
+    updatePaticipant(data);
+  });
+</script>
+
+
+<script>
+  	function updatePaticipant(data) {
+		console.log(data.from);
+		console.log($("#"+data.from));
+		var id = "#"+data.from;
+		
+		var html = data.from +" [" + data.status +"]";
+		
+		if($(id).length == 0) {
+		   $( "#participants").append('<li id="' + data.from + '">'  +html+  '</li>' );
+		} else {
+			$(id).html(html);
+		}
+		
+		$(id).effect("highlight",{color: 'blue'}, 500);
+		
+		
+	}
+	
+</script>
+
+

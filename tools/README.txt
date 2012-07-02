@@ -1,0 +1,1 @@
+These files are just shell scripts with a curl command in em so you can emulate the twilio calls

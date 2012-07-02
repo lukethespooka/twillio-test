@@ -1,4 +1,4 @@
-* Node Version of Brijtalk
+Node Version of Brijtalk
 
 git clone the rep
 run "npm install"
@@ -7,3 +7,5 @@ then node app.js
 navigate to e.g localhost:3000/conf/44123131321 
 
 where the number is you conference number in twilio.
+
+point your twilio app to post to localhost:3000/conf/   or what ever public url

@@ -20,7 +20,7 @@ point your twilio app to post to localhost:3000/conf/   or what ever public url 
 
 ## Credits
 
-  - [Jared Hanson](http://github.com/jaredhanson)
+  - [Richard Spence](http://github.com/spuggy) 
 
 ## License
 

@@ -26,7 +26,7 @@ point your twilio app to post to localhost:3000/conf/   or what ever public url 
 
 (The MIT License)
 
-Copyright (c) 2011 Jared Hanson
+Copyright (c) 2012 Richard Spence
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

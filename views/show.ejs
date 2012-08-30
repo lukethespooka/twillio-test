@@ -1,5 +1,6 @@
-<p> conf=<%= conf.msisdn %> </p>
+<h1> conf=<%= conf.msisdn %> </h1>
 
+<h2>Participants</h2>
 <div>
     <ul id="participants">
     <% for (var p in conf.participants) { %>
@@ -18,8 +19,9 @@
 
 <script>
   var socket = io.connect(); // TIP: .connect with no args does auto-discovery
-  
+  console.log("sockets ...");
   socket.on("<%=conf.msisdn%>", function (data) {
+    console.log("updatePaticipant ...");
     updatePaticipant(data);
   });
 </script>
